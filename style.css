@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: hsl(210, 60%, 98%);
+}
+
+.container {
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    max-width: 740px;
+    width: 100%;
+    margin: 4rem auto;
+}
+
+.main {
+    padding: 0 25px;
+}
+
+.topo {
+    display: flex;
+    padding: 30px 0;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.topo .check-all {
+    cursor: pointer;
+    font-weight: 700;
+    color: hsl(219, 85%, 26%);
+}
+
+.topo h1>span {
+    font-size: 1.5rem;
+    color: white;
+    background-color: hsl(219, 85%, 26%);
+    padding: 2px 14px;
+    border-radius: 8px;
+}
+
+.status-active {
+    font-weight: 800;
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+.notificacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.date {
+    font-weight: 500;
+    color: hsl(219, 14%, 63%);
+}
+
+.notificacao-single {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    gap: 1.3rem;
+    list-style-type: none;
+}
+
+.notificacao-single.active {
+    background-color: hsl(210, 100%, 97%);
+}
+
+.notificacao-single img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+}
+
+.content {
+    flex: 1;
+}
+
+.content p {
+    font-weight: 500;
+    color: hsl(219, 12%, 42%);
+}
+
+p>.name {
+    color: black;
+}
+
+.content .icon-red {
+    margin-left: 4px;
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hsl(1, 90%, 64%);
+}
+
+.kimberli {
+    cursor: pointer;
+    border: 3px solid hsl(206, 53%, 92%);
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+.kimberli img {
+    width: 50px;
+    height: 50px;
+}
+
+.comment-single {
+    font-size: 1rem;
+    line-height: 25px;
+    margin-top: 15px;
+    font-weight: 500;
+    color: hsl(219, 12%, 42%);
+    background-color: hsl(206, 53%, 92%);
+    border: 1px solid hsl(206, 53%, 92%);
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.comment-single.active {
+    border: 1px solid hsl(219, 14%, 63%);
+}
+
+.attribution {
+    padding: 20px;
+    text-align: center;
+}
+
+.attribution a {
+    font-weight: 700;
+    color: hsl(219, 85%, 26%);
+    text-decoration: none;
+}
