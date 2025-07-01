@@ -32,21 +32,15 @@ body {
 .topo .check-all {
     cursor: pointer;
     font-weight: 700;
-    color: hsl(219, 85%, 26%);
+    color: hsl(221, 8%, 38%);
 }
 
-.topo h1>span {
+.count {
     font-size: 1.5rem;
     color: white;
     background-color: hsl(219, 85%, 26%);
     padding: 2px 14px;
     border-radius: 8px;
-}
-
-.status-active {
-    font-weight: 800;
-    color: hsl(219, 85%, 26%);
-    cursor: pointer;
 }
 
 .notificacoes {
@@ -57,7 +51,7 @@ body {
 
 .date {
     font-weight: 500;
-    color: hsl(219, 14%, 63%);
+    color: hsl(218, 10%, 52%);
 }
 
 .notificacao-single {
@@ -67,6 +61,15 @@ body {
     border-radius: 10px;
     gap: 1.3rem;
     list-style-type: none;
+}
+
+.notificacao-single:hover,
+.notificacao-single.active:hover {
+    background-color: hsl(206, 53%, 92%);
+}
+
+.notificacao-single:hover .comment-single {
+    background-color: hsl(0, 0%, 100%);
 }
 
 .notificacao-single.active {
@@ -92,6 +95,17 @@ p>.name {
     color: black;
 }
 
+.content b {
+    color: hsl(219, 85%, 26%);
+}
+
+p>.name:hover,
+.content b:hover,
+.topo .check-all:hover {
+    cursor: pointer;
+    color: hsl(219, 72%, 38%);
+}
+
 .content .icon-red {
     margin-left: 4px;
     display: inline-flex;
@@ -101,18 +115,15 @@ p>.name {
     background-color: hsl(1, 90%, 64%);
 }
 
-.kimberli {
-    cursor: pointer;
-    border: 3px solid hsl(206, 53%, 92%);
-    width: 55px;
-    height: 55px;
-    border-radius: 10px;
-    margin-left: auto;
-}
-
 .kimberli img {
     width: 50px;
     height: 50px;
+}
+
+.kimberli img:hover {
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
 }
 
 .comment-single {
@@ -121,16 +132,12 @@ p>.name {
     margin-top: 15px;
     font-weight: 500;
     color: hsl(219, 12%, 42%);
-    background-color: hsl(206, 53%, 92%);
     border: 1px solid hsl(206, 53%, 92%);
     border-radius: 8px;
     padding: 20px;
-    cursor: pointer;
+
 }
 
-.comment-single.active {
-    border: 1px solid hsl(219, 14%, 63%);
-}
 
 .attribution {
     padding: 20px;

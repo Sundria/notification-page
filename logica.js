@@ -1,28 +1,38 @@
-const statusAtivos = document.querySelectorAll('.status-active');
-const imageComment = document.querySelector('.kimberli');
-const comment = document.querySelector('.comment-single');
+const notifications = document.querySelectorAll('.notificacao-single.active');
+const countSpan = document.querySelector('.count');
 
-statusAtivos.forEach(el => {
-    el.addEventListener('click', () => {
-        el.style.color = 'hsl(219, 12%, 42%)'
+function updateCount() {
+    const remaining = document.querySelectorAll('.notificacao-single.active').length;
+    countSpan.innerText = remaining;
+    if (remaining === 0) {
+        countSpan.classList.remove('count')
+        countSpan.innerText = '';
+    }
+}
+
+notifications.forEach(notification => {
+    console.log(notification);
+
+    const iconRed = notification.querySelector('.icon-red');
+
+    notification.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (notification.classList.contains('active')) {
+            notification.classList.remove('active');
+            if (iconRed) iconRed.classList.remove('icon-red');
+            updateCount();
+        }
     });
 });
 
-comment.addEventListener('click', () => {
-    comment.style.backgroundColor = 'white';
-    comment.classList.add('active')
-})
-
-imageComment.addEventListener('click', () => {
-    imageComment.style.border = '3px solid hsl(0, 0%, 100%)'
-})
-
 function checkAll() {
-    comment.style.backgroundColor = 'white';
-    comment.classList.add('active')
-    statusAtivos.forEach(el => {
-        el.style.color = 'hsl(219, 12%, 42%)'
-    })
-    imageComment.style.border = '3px solid hsl(0, 0%, 100%)'
-    document.querySelector('.check-all').style.color = 'hsl(219, 12%, 42%)'
+    notifications.forEach(notification => {
+        const iconRed = notification.querySelector('.icon-red');
+        if (notification.classList.contains('active')) {
+            notification.classList.remove('active');
+            if (iconRed) iconRed.classList.remove('icon-red');
+            updateCount();
+        }
+    });
 }
